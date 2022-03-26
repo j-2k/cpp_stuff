@@ -1,23 +1,67 @@
 #include <iostream>
 #include "Log.h"
+#include <iomanip>
+#include <string>
+#include <vector>
+#include <algorithm>
+
+int ManyNumbers(std::vector<int> a)
+{
+	std::sort(a.begin(), a.end());
+	//sorted = 10 30 60 90 100
+	//index =  0 1 2 3 4
+	
+	for (size_t i = 0; i < a.size(); i++)
+	{
+		std::cout << a[i] << " ";
+	}
+
+	std::cout << std::endl << a.size() << std::endl;
+
+	std::cout << a[a.size()/2] << " size/ < | size() >  " << a.size() << std::endl;
+
+	std::cout << a[1];
+
+	std::cout << std::endl;
+	return 0;
+}
 
 int main()
 {
-	//int var = 10; // 4 bytes > 2b <-> -2b~ | 1 byte = 8 bits => 32 bits = 1 bit for +- / 31 bits left for number 2^31 = 2.1b~ -1 for 0
-	//unsigned int unsInt = 10;
-	//char1byte, short2bytes, int4, float4/double8?, long4, long long8, (unsigned for pos only)
+	//part11 https://www.youtube.com/watch?v=0ebzPwixrJA&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb&index=11
 
-	//short a = 'A';
-	//std::cout << a << std::endl;
+	std::vector<int> nums = { 100,90,30,10,60 };
+	ManyNumbers(nums);
 
-	//float decNum = 1.2f; //(if no f it will be a double)
 
-	bool boolTest = true; // 1 byte (tech 1 bit, cant manipulate bits only bytes)
+	std::cout << std::endl;
+	std::cout << std::endl;
+	std::cout << std::endl;
 
-	std::cout << sizeof(boolTest) << std::endl;
-	std::cout << sizeof(float) << std::endl;
-	std::cout << sizeof(long long) << std::endl;
+	std::string str("Some string");
+	std::cout << str << std::endl;
+	std::cout << str[0] << str[1] << std::endl;
 
+	std::string hour = ("helo");
+	std::cout << hour[0] << hour[1] << std::endl;
+
+	std::string hourOnly = hour.substr(0, 2);
+	std::cout << hour << " << hour" << std::endl;
+	std::cout << hourOnly << " << hourOnly resized hour" << std::endl;
+
+	std::cout << str[str.length() - 2] << std::endl;
+
+	str.resize(str.size() - 2);
+
+	std::cout << "Resized = " << str << std::endl;
+
+	if (str[str.length() - 2] == 'n')
+	{
+		std::cout << "Detected n as sec last" << std::endl;
+	}
+
+
+	StartLog();
 	Log("Hello World!");
 	std::cin.get();
 }
