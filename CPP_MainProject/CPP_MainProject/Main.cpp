@@ -10,7 +10,7 @@ int ManyNumbers(std::vector<int> a)
 	std::sort(a.begin(), a.end());
 	//sorted = 10 30 60 90 100
 	//index =  0 1 2 3 4
-	
+
 	for (size_t i = 0; i < a.size(); i++)
 	{
 		std::cout << a[i] << " ";
@@ -18,7 +18,7 @@ int ManyNumbers(std::vector<int> a)
 
 	std::cout << std::endl << a.size() << std::endl;
 
-	std::cout << a[a.size()/2] << " size/ < | size() >  " << a.size() << std::endl;
+	std::cout << a[a.size() / 2] << " size/ < | size() >  " << a.size() << std::endl;
 
 	std::cout << a[1];
 
@@ -28,7 +28,11 @@ int ManyNumbers(std::vector<int> a)
 
 int main()
 {
+	std::vector<int> nums1 = { 100,90,30 };
+	
+	std::cout << nums1.size() - 1 << " size of nums 1" << std::endl;
 
+	std::cout << std::endl << std::endl << std::endl;
 	std::vector<int> nums = { 100,90,30,10,60 };
 	ManyNumbers(nums);
 
