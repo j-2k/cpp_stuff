@@ -34,9 +34,16 @@ int main()
 	ManyNumbers(nums);
 
 
-	std::cout << std::endl;
-	std::cout << std::endl;
-	std::cout << std::endl;
+	std::cout << std::endl << std::endl << std::endl;
+
+	int aPTR = 10;
+	int* ptr = &aPTR;
+	std::cout << aPTR << " " << ptr << std::endl;
+	*ptr = 20;
+	std::cout << aPTR << " " << ptr << std::endl;
+
+
+	std::cout << std::endl << std::endl << std::endl;
 
 	std::string str("Some string");
 	std::cout << str << std::endl;
