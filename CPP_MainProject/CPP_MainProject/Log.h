@@ -4,3 +4,12 @@
 void Log(const char* msg);
 
 void StartLog();
+
+void AddToReference(int& numberToAdd, int addBy);
+
+
+void AddToPointer(int* numberToAdd, int addBy);
+
+//overloading
+void AddBy(int& numberToAdd, int addBy);
+void AddBy(int* numberToAdd, int addBy);

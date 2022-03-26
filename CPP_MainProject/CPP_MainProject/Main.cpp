@@ -28,7 +28,6 @@ int ManyNumbers(std::vector<int> a)
 
 int main()
 {
-	//part11 https://www.youtube.com/watch?v=0ebzPwixrJA&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb&index=11
 
 	std::vector<int> nums = { 100,90,30,10,60 };
 	ManyNumbers(nums);
@@ -36,11 +35,37 @@ int main()
 
 	std::cout << std::endl << std::endl << std::endl;
 
-	int aPTR = 10;
-	int* ptr = &aPTR;
-	std::cout << aPTR << " " << ptr << std::endl;
-	*ptr = 20;
-	std::cout << aPTR << " " << ptr << std::endl;
+	int aNum = 10;
+	int* ptr = &aNum; // point to the memory address of aNum
+	std::cout << aNum << " " << ptr << std::endl;
+	*ptr = 20;			// dereference ptr and change the value of it to 20
+	std::cout << aNum << " " << ptr << std::endl;
+	AddToPointer(ptr, 100);
+	AddToReference(*ptr, 100);
+	std::cout << aNum << " " << ptr << " " << &aNum << " " << *ptr << std::endl;
+
+	int bNum = 50;
+	int& ref = bNum;
+	int* ptrB = &bNum;
+	ref = 40;
+
+	std::cout << ref << " " << bNum << " " << ptrB << std::endl;
+
+	AddToReference(bNum, 100);
+
+	std::cout << ref << " " << bNum << " " << ptrB << std::endl;
+
+	AddBy(ptrB, 10);
+
+	AddBy(*ptrB, 10);
+
+	std::cout << ref << " " << bNum << " " << ptrB << std::endl;
+
+	char c = 'C';
+	char* cPTR = &c;
+	char** cPTRPTR = &cPTR;
+
+	std::cout << c << " " << *cPTR << " " << &cPTR << " " << **cPTRPTR << " " << &cPTRPTR << std::endl; //*cPTRPTR this value?
 
 
 	std::cout << std::endl << std::endl << std::endl;
