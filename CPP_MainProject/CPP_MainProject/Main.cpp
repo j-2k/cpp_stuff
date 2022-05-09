@@ -26,8 +26,53 @@ int ManyNumbers(std::vector<int> a)
 	return 0;
 }
 
+
 int main()
 {
+	std::vector <int> arr1 = {10,-20,-5};
+
+	//std::cin.get();
+
+	int x = 0;
+	int y = 2;
+
+	if (x && y)
+	{
+		std::cout << "HELLO";
+	}
+	else
+	{
+		std::cout << "H2";
+	}
+	/*
+	//reverse array
+	std::cout << 1 / 2 << " " << 2 / 2 << std::endl;
+
+
+	std::cout << arr1[4] << std::endl;
+
+	for (size_t i = 0; i < arr1.size(); i++)
+	{
+		std::cout << arr1[i] << std::endl;
+	}
+
+	std::cout << std::endl << arr1.size() << std::endl << std::endl;
+
+	for (int i = 0; i < arr1.size()/2; i++)
+	{
+		int temp = arr1[i];
+		arr1[i] = arr1[arr1.size() - 1 - i];
+		arr1[arr1.size() - 1 - i] = temp;
+	}
+
+	for (size_t i = 0; i < arr1.size(); i++)
+	{
+		std::cout << arr1[i] << std::endl;
+	}
+	*/
+
+//#pragma oldtests
+	/*
 	std::vector<int> nums1 = { 100,90,30 };
 	
 	std::cout << nums1.size() - 1 << " size of nums 1" << std::endl;
@@ -99,5 +144,6 @@ int main()
 
 	StartLog();
 	Log("Hello World!");
-	std::cin.get();
+	*/
+//#pragma endregion
 }
